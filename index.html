@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Hello Web!</title>
+        <meta charset="UTF-8" />
+    </head>
+
+<body>
+    <p>
+        Hello, Web! <br/>
+        Este é meu primeiro HTML!
+    </p>
+
+    <input type="text" id="txtNome"/>
+
+    <button onclick="sayHello()">Olá!</button>
+    <input type="button" value="Adeus!" onclick="sayGoodbye()"/>
+
+    <div id="message"></div>
+</body>
+
+<script>
+    function sayHello() {
+        const name = document.getElementById('txtNome').value
+        //alert('Hello, ' + name)
+
+        const h1 = document.createElement('h1')
+        h1.innerHTML = 'Hello, ' + name
+        
+        const message = document.getElementById('message')
+        message.appendChild(h1)
+    }
+
+    function sayGoodbye() {
+        alert('Goodbye, Web!')
+    }
+
+</script>
+
+
+</html>
